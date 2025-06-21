@@ -1,0 +1,131 @@
+body {
+  background-color: #f4f1ea;
+  font-family: 'Ubuntu', 'Roboto', sans-serif;
+  color: #2c2b2b;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat-box {
+  width: 600px;
+  max-width: 90%;
+  margin: 50px auto;
+  border: 1px solid #c2b7a3;
+  padding: 20px;
+  height: 600px;
+  overflow-y: auto;
+  background: #fffdf9;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chat-box::before {
+  content: "Your favourite shrink – Just kidding. Your favourite Safe Place.";
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #5b5b50;
+  margin-bottom: 16px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.user {
+  text-align: right;
+  margin: 8px 0;
+  color: #6b8e23;
+  background: #eaf0e1;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  max-width: 70%;
+  align-self: flex-end;
+}
+
+.bot {
+  text-align: left;
+  margin: 8px 0;
+  color: #4e3620;
+  background: #f5efe6;
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  max-width: 70%;
+  align-self: flex-start;
+}
+
+.input-box {
+  display: flex;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #e0dcd3;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  background: #f0ede5;
+  border: 1px solid #cfc8ba;
+  color: #333;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 18px;
+  background: #a4c39e;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #88a87e;
+}
+
+.prompt-box {
+  margin-top: 20px;
+  background: #f9f5ee;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px dashed #c4bfae;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+.prompt-heading {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #5c5c5c;
+}
+
+.prompt-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.prompt-buttons button {
+  background: #e8e2d4;
+  color: #3a3a3a;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.prompt-buttons button:hover {
+  background: #d5cbb8;
+}

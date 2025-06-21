@@ -1,0 +1,17 @@
+<div class="chat-box">
+  <div *ngFor="let msg of messages" [ngClass]="msg.sender">
+    <b>{{ msg.sender === 'user' ? 'You' : 'Bot' }}:</b> {{ msg.text }}
+  </div>
+
+  <div class="input-box">
+    <input [(ngModel)]="userInput" (keydown.enter)="sendMessage()" placeholder="Type a message..." />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+
+  <div *ngIf="showPrompts" class="prompt-box">
+    <p class="prompt-heading">Maybe try one of these:</p>
+    <div class="prompt-buttons">
+      <button *ngFor="let p of fallbackPrompts" (click)="usePrompt(p)">{{ p }}</button>
+    </div>
+  </div>
+</div>
